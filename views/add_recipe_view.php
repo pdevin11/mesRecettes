@@ -30,14 +30,14 @@
 
             <div class="form-group">
                 <label for="steps">Etapes de la recette</label>
-                <textarea class="form-control" id="steps" name="steps" aria-describedby='stepsHelp'></textarea>
+                <textarea class="form-control" id="steps" name="steps" aria-describedby='stepsHelp' row="8"></textarea>
                 <small id="stepsHelp" class="form-text text-muted">Ajouter un ";" à la fin de chaque étape sauf pour la dernière.</small>
                 <span class="error"><?php if(isset($stepsError)) echo $stepsError; ?></span>
             </div> <!-- ./form-group steps -->
 
             <div class="form-group">
                 <label for="ingredients">Ingrédients nécessaires</label>
-                <textarea class="form-control" id="ingredients" name="ingredients" aria-describedby='ingredientsHelp'></textarea>
+                <textarea class="form-control" id="ingredients" name="ingredients" aria-describedby='ingredientsHelp' row="8"></textarea>
                 <small id="ingredientsHelp" class="form-text text-muted">Ajouter un ";" à la fin de chaque étape sauf pour la dernière.</small>
                 <span class="error"><?php if(isset($ingredientsError)) echo $ingredientsError; ?></span>
             </div> <!-- ./form-group ingredients -->
