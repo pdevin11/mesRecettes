@@ -35,7 +35,27 @@ if(!empty($_POST) && isset($_POST['btnAdd'])){
         /* Définition des variables */
         $name = $_POST['name'];
 
-        if(isset($_POST['image'])){$image = $_POST['image'];}
+        if(isset($_FILES['imageFile']) && $_FILES['imageFile']['error'] == 0){
+            if($_FILES['imageFile']['size'] < 2000000){
+                $fileName = pathinfo($_FILES['imageFile']['name']);
+                $fileExtension = $fileName['extension'];
+                $autorizedExtensions = array('jpg', 'jpeg', 'png', 'gif');
+                if(in_array($fileExtension, $autorizedExtensions)){
+                    $uploadDir = 'assets/images/';
+                    if(move_uploaded_file($_FILES['imageFile']['tmp_name'], $uploadDir . basename($_FILES['imageFile']['name']))){
+                    } else {
+                        $uploadError = 'Une erreur est survenue !';
+                    }
+                } else {
+                    $uploadError = 'Extension de fichier non autorisée.';
+                }
+            } else {
+                $uploadError = 'Image supérieure à 2Mo.';
+            }
+            $image = $_FILES['imageFile']['name'];
+        } else if (isset($_FILES['imageFile']) && $_FILES['imageFile']['error'] !== 0) {
+            $uploadError = 'Erreur lors de l\'upload.';
+        }
 
         $steps = $_POST['steps'];
         $ingredients = $_POST['ingredients'];
