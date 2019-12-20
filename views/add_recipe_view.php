@@ -21,13 +21,6 @@
                 <span class="error"><?php if(isset($nameError)) echo $nameError; ?></span>
             </div> <!-- ./form-group name -->
 
-            <!-- <div class="form-group">
-                <label for="image">Nom de l'image associée à la recette</label>
-                <input type="text" class="form-control" id="image" name="image" placeholder="mon_image.png" aria-describedby="imageHelp">
-                <small id="imageHelp" class="form-text text-muted">Indiquer également la teminaison du fichier (.jpg, .jpeg, .png). Si aucune image n'est choisie, une image par défaut sera ajoutée.</small>
-            </div> ./form-group image -->
-
-
             <div class="form-group">
                 <input type="hidden" name="MAX_FILE_SIZE" value="20480000" /> <!-- limite à 2Mo la taille d'un upload -->
                 <label for="imageFile">Image associée à la recette :</label><br>
