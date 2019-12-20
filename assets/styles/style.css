@@ -1,0 +1,76 @@
+/* REGLES GENERALES */
+
+.container{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.row{
+    width: 100%;
+}
+
+/* MENU PRINCIPAL */
+
+#menu{
+    height: 80px;
+    width: 100%
+}
+.element{
+    margin: auto 30px;
+}
+
+/* TITRE */ 
+
+h1{
+    text-align: center;
+    height: 70px;
+    line-height: 60px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+h2{
+    text-align: center;
+    margin: 20px;
+}
+
+/* CADRES PRINCIPAUX */
+
+.frame{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+.image, .info{
+    height: 300px;
+}
+.icon > img{
+    width: 20px;
+    height: 20px;
+    margin: 5px 5px 5px 0px;
+}
+img{
+    height: 280px;
+    width: 100%
+}
+.recipe > ul{
+    list-style-type: decimal;
+}
+.ingredients > ul{
+    list-style-type: none;
+}
+
+/* AJOUTER UNE RECETTE */
+/* FORM */
+
+button{
+    margin: 10px;
+}
+.result{
+    font-style: italic;
+    text-align: center;
+}
+.error{
+    font-style: italic;
+    color: red;
+}
