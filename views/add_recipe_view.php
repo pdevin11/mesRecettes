@@ -14,18 +14,26 @@
 
         <span class="result"><?php if(isset($msg))echo $msg; ?></span>
 
-        <form action="" method="POST">
+        <form action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="name">Nom de la recette</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Nom de la recette" value="<?php if(isset($_POST['name'])){echo $_POST['name'];} ?>">
                 <span class="error"><?php if(isset($nameError)) echo $nameError; ?></span>
             </div> <!-- ./form-group name -->
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="image">Nom de l'image associée à la recette</label>
                 <input type="text" class="form-control" id="image" name="image" placeholder="mon_image.png" aria-describedby="imageHelp">
                 <small id="imageHelp" class="form-text text-muted">Indiquer également la teminaison du fichier (.jpg, .jpeg, .png). Si aucune image n'est choisie, une image par défaut sera ajoutée.</small>
-            </div> <!-- ./form-group image -->
+            </div> ./form-group image -->
+
+
+            <div class="form-group">
+                <input type="hidden" name="MAX_FILE_SIZE" value="20480000" /> <!-- limite à 2Mo la taille d'un upload -->
+                <label for="imageFile">Image associée à la recette :</label><br>
+                <input type="file" name="imageFile" id="imageFile">
+                <span class="error"><?php if(isset($uploadError)) echo $uploadError; ?></span>
+            </div> <!-- ./form-group imageFile -->
 
             <div class="form-group">
                 <label for="steps">Etapes de la recette</label>
