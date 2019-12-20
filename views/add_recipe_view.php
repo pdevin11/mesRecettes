@@ -63,11 +63,11 @@
 
             <p>Est-ce un plat végétarien?</p>
             <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="1" name="isVegetarian" class="custom-control-input">
+                <input type="radio" id="1" value="1" name="isVegetarian" class="custom-control-input">
                 <label class="custom-control-label" for="1">Oui</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="0" name="isVegetarian" class="custom-control-input">
+                <input type="radio" id="0" value="0" name="isVegetarian" class="custom-control-input">
                 <label class="custom-control-label" for="0">Non</label>
             </div>
             <br>
