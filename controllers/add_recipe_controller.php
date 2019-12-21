@@ -39,7 +39,7 @@ if(!empty($_POST) && isset($_POST['btnAdd'])){
             if($_FILES['imageFile']['size'] < 2000000){
                 $fileName = pathinfo($_FILES['imageFile']['name']);
                 $fileExtension = $fileName['extension'];
-                $autorizedExtensions = array('jpg', 'jpeg', 'png', 'gif');
+                $autorizedExtensions = array('jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF');
                 if(in_array($fileExtension, $autorizedExtensions)){
                     $uploadDir = 'assets/images/';
                     if(move_uploaded_file($_FILES['imageFile']['tmp_name'], $uploadDir . basename($_FILES['imageFile']['name']))){
